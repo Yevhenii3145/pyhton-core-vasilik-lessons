@@ -83,5 +83,5 @@ v = "skra"
 print(id(t))  # 2277050449328
 # идентичное id т.к. одна и та же строка, а строка -неизменный тип данных
 print(id(v))  # 2324287815088
-a = input("Please enter some value: ")  # 179
+a = input("Please enter some value:")  # 179
 print(f"YOUR INPUT IS: {a}")  # YOUR INPUT IS: 179
