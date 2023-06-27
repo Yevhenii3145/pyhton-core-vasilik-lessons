@@ -9,4 +9,4 @@ def test():
 
 
 test()
-print("global x changed to: ", x) # 33
+print("global x changed to: ", x)  # 33
