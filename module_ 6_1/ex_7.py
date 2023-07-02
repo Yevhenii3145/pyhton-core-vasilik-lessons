@@ -4,7 +4,7 @@ new_dir = Path("ABC")
 # exist_ok=True - если папка уже сущетвует, то не будет ошибки при попытке создать новую
 new_dir.mkdir(exist_ok=True)
 # new_dir.mkdir() #  без параметра будет FileExistsError: [WinError 183] Невозможно создать файл, так как он уже существует: 'ABC'
-# new_dir.rmdir()  # удаляет папку если она не пустая
+# new_dir.rmdir()  # удаляет папку если она пустая
 
 # new_dir = Path("Test/Temp")
 # new_dir.mkdir(exist_ok=True, parents=True) # создаем папку в папке Test/Temp

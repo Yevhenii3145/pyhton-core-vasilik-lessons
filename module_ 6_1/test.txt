@@ -4,4 +4,3 @@ Hello world 2
 Hi Jack
 Hi David
 Hi Bob
-New Line
