@@ -17,7 +17,9 @@ output = args.get("output") # из словаря берём значение п
 print(source, output)
 
 def read_folder(path:Path) -> None:
+    print(f"path equal: {path}")
     for el in path.iterdir():
+        print(f"element: {el}")
         if el.is_dir():
             read_folder(el)
         else:
@@ -28,8 +30,8 @@ def copy_file(file: Path) -> None:
     ext = ext[1:]
     new_path = output_folder / ext # output  ext => dist/png
     print(f"New_path: {new_path}")
-    new_path.mkdir(exist_ok=True, parents=True)
-    copyfile(file, new_path / file.name)
+    new_path.mkdir(exist_ok=True, parents=True) # создаём папку с нужным расширением (jpg, png, etc.)
+    copyfile(file, new_path / file.name) #  копирование файла
 
 output_folder = Path(output)
-read_folder(Path(source))
+read_folder(Path(source)) # вызов (старт работы) функции read_folder
