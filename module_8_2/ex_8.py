@@ -14,22 +14,23 @@ with open("numbers.txt", "r") as file:
         nums = line.split(",")
         numbers_list.extend(nums)
 
-numbers_counter = Counter(numbers_list)
-
 
 def my_counter(some_list: list, n: int) -> tuple:
     numbers_counter = Counter(some_list)
+
     if n > len(numbers_counter):
         print(f"Your second arg {n} must be less then len of list")
         return
-    most_c = numbers_counter.most_common(n)
-    print("MOST COMMON", most_c, end="  ")
+    most_common = numbers_counter.most_common(n)
+    print("MOST COMMON", most_common, end="  ")
     print("ALL LEN", len(numbers_counter), end="  ")
     all_most_common = numbers_counter.most_common(len(numbers_counter))
+
     revers_of_all_m_c = all_most_common[::-1]
     less_common = revers_of_all_m_c[: n]
     print("LESS COMMON", less_common)
-    return (most_c, less_common)
+
+    return (most_common, less_common)
 
 
 # MOST COMMON [('65', 128), ('8', 123)]  ALL LEN 100  LESS COMMON [('84', 75), ('28', 80)]
