@@ -24,9 +24,9 @@ def my_counter(some_list: list, n: int) -> tuple:
     most_common = numbers_counter.most_common(n)
     print("MOST COMMON", most_common, end="  ")
     print("ALL LEN", len(numbers_counter), end="  ")
-    all_most_common = numbers_counter.most_common(len(numbers_counter))
+    all_counter = numbers_counter.most_common(len(numbers_counter))
 
-    revers_of_all_m_c = all_most_common[::-1]
+    revers_of_all_m_c = all_counter[::-1]
     less_common = revers_of_all_m_c[: n]
     print("LESS COMMON", less_common)
 
