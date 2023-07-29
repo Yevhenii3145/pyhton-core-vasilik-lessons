@@ -3,5 +3,5 @@
     "editor.defaultFormatter": "ms-python.autopep8"
   },
   "python.formatting.provider": "none",
-  "editor.parameterHints.cycle": false
+  "editor.parameterHints.cycle": false,
 }
