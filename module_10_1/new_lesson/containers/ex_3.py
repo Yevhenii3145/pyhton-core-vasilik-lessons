@@ -11,13 +11,16 @@ template = [
 ]
 
 for i, comment in enumerate(template):
-    print("{:^5}|{:<15}".format(i,comment))
+    print("{:^5}|{:<15}".format(i, comment))
+
 
 class Comments(UserString):
     def get_limit_comment(self, limit=10):
-        return f"{self.data[:limit - 3]}..." # последние 3 символа заменяем на ...
+        # последние 3 символа заменяем на ...
+        return f"{self.data[:limit - 3]}..."
 
-comments = [Comments(comment) for comment in template ]
+
+comments = [Comments(comment) for comment in template]
 
 for i, comment in enumerate(comments):
     print("{:^5}|{:<15}".format(i, comment.get_limit_comment(15)))

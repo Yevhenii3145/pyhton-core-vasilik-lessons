@@ -10,25 +10,31 @@ MRO в Python работает слудующим образом:
 6.Вызывает исключение, что атрибут не найден.
 """
 
+
 class A:
     def hi(self):
         print("A")
+
 
 class B(A):
     # def hi(self):
     #     print("B")
     pass
 
+
 class C(A):
     # def hi(self):
     #     print("C")
     pass
 
-class D(B,C):
+
+class D(B, C):
     # def hi(self):
     #     return 5 + 6
     pass
 
+
 d = D()
-d.hi() # A
-print(D.__mro__) # (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+d.hi()  # A
+# (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+print(D.__mro__)

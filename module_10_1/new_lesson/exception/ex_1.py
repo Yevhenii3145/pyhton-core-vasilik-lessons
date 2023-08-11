@@ -1,7 +1,6 @@
 class MyException(Exception):
-    def __init__(self,value):
+    def __init__(self, value):
         self.value = value
-
 
 
 def baz(n: int):
@@ -10,9 +9,10 @@ def baz(n: int):
     else:
         return n + 5
 
-print(baz(10)) # 15
+
+print(baz(10))  # 15
 
 try:
     print(baz(-10))
 except MyException as err:
-    print(err) # Value -10 < 0
+    print(err)  # Value -10 < 0
